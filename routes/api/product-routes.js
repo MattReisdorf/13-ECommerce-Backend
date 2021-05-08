@@ -107,7 +107,7 @@ router.put('/:id', (req, res) => {
 	  "tagIds": [1, 2, 3, 4]
   }
   */
- 
+
   Product.update(req.body, {
     where: {
       id: req.params.id,
@@ -158,6 +158,7 @@ router.delete('/:id', async (req, res) => {
 
     if (!productData) {
       res.status(404).json({ message: 'No Product Found With This ID' })
+      return;
     }
 
     res.status(200).json(productData);
