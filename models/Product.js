@@ -30,7 +30,7 @@ Product.init(
       },
     },
 
-    stonk: {
+    stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
